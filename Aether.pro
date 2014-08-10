@@ -15,10 +15,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    modelviewer.cpp
+    modelviewer.cpp \
+    basemodel.cpp \
+    boxmodel.cpp
 
 HEADERS  += mainwindow.h \
-    modelviewer.h
+    modelviewer.h \
+    basemodel.h \
+    boxmodel.h
 
 FORMS    += mainwindow.ui
 
