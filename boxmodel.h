@@ -7,6 +7,7 @@ class BoxModel : public BaseModel
 {
 public:
     BoxModel();
+    virtual ~BoxModel();
 
     virtual void drawModel();
 };

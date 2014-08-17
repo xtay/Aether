@@ -1,5 +1,6 @@
 #include "basemodel.h"
 #include <GL/gl.h>
+#include <GL/glu.h>
 #include <cmath>
 
 BaseModel::BaseModel()

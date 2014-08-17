@@ -5,6 +5,9 @@
 #include <vector>
 #include <QString>
 #include <qgl.h>
+#include <QGLViewer/vec.h>
+
+using qglviewer::Vec;
 
 using std::vector;
 
@@ -14,12 +17,15 @@ public:
     DebugInfo();
 
     void addLine(const char *fmt, ...);
+    void addVertex3f(float x, float y, float z);
+    void addVertex3fv(Vec v);
 
     void displayInfo(QGLWidget* qw);
 
 private:
 
     vector<QString> vInfo_;
+    vector<Vec> vVertex_;
 
     QString curStr_;
 

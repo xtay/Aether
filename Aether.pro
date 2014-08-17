@@ -17,12 +17,20 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     modelviewer.cpp \
     basemodel.cpp \
-    boxmodel.cpp
+    boxmodel.cpp \
+    debuginfo.cpp \
+    graphelement.cpp \
+    manipulator.cpp \
+    planemodel.cpp
 
 HEADERS  += mainwindow.h \
     modelviewer.h \
     basemodel.h \
-    boxmodel.h
+    boxmodel.h \
+    debuginfo.h \
+    graphelement.h \
+    manipulator.h \
+    planemodel.h
 
 FORMS    += mainwindow.ui
 
