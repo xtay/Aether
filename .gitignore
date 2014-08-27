@@ -1,4 +1,5 @@
 *.pro.user
+*.mesh
 # C++ objects and libs
 
 *.slo

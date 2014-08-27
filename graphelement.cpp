@@ -74,6 +74,7 @@ void GraphElement::drawElement(bool isSelected)
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     }
     else {
+        //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         glColor3f(0.5,0.5,0.5);
         pbm_->drawModel();
     }

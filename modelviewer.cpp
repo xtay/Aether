@@ -20,6 +20,7 @@
 #include "debuginfo.h"
 #include "boxmodel.h"
 #include "planemodel.h"
+#include "meshmodel.h"
 #include <QKeyEvent>
 #include <QGLViewer/manipulatedCameraFrame.h>
 
@@ -55,12 +56,13 @@ int ModelViewer::addElement(BaseModel *pbm, const Frame& fr)
 void ModelViewer::init()
 {
     glPointSize(8.0);
-    Frame fr(Vec(1,-1,1), Quaternion(Vec(1,0,0),Vec(1,0,0)));
-    Frame frRef(Vec(-2,2,2), Quaternion(Vec(1,0,0),Vec(1,0,0)));
-    ModelViewer::addElement(new BoxModel());
-    ModelViewer::addElement(new BoxModel(), fr);
-    ModelViewer::addElement(new BoxModel(), frRef);
+    //Frame fr(Vec(1,-1,1), Quaternion(Vec(1,0,0),Vec(1,0,0)));
+    //Frame frRef(Vec(-2,2,2), Quaternion(Vec(1,0,0),Vec(1,0,0)));
+    //ModelViewer::addElement(new BoxModel());
+    //ModelViewer::addElement(new BoxModel(), fr);
+    //ModelViewer::addElement(new BoxModel(), frRef);
     ModelViewer::addElement(new PlaneModel());
+    ModelViewer::addElement(new MeshModel("../Aether/small.mesh"));
 
     setMouseBinding(Qt::NoModifier, Qt::RightButton, CAMERA, NO_MOUSE_ACTION);
     setMouseBinding(Qt::NoModifier, Qt::MidButton, CAMERA, NO_MOUSE_ACTION);

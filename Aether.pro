@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     debuginfo.cpp \
     graphelement.cpp \
     manipulator.cpp \
-    planemodel.cpp
+    planemodel.cpp \
+    meshmodel.cpp
 
 HEADERS  += mainwindow.h \
     modelviewer.h \
@@ -30,7 +31,8 @@ HEADERS  += mainwindow.h \
     debuginfo.h \
     graphelement.h \
     manipulator.h \
-    planemodel.h
+    planemodel.h \
+    meshmodel.h
 
 FORMS    += mainwindow.ui
 
