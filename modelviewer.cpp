@@ -44,6 +44,7 @@ ModelViewer::~ModelViewer()
 int ModelViewer::addElement(BaseModel *pbm)
 {
     mGraphElem_.insert(make_pair(elementName_++, GraphElement(pbm)));
+    pbm->initModel();
     return elementName_ - 1;
 }
 

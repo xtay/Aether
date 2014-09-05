@@ -17,6 +17,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ******************************************************************************/
 #include "graphelement.h"
+#include "planemodel.h"
 
 using qglviewer::Frame;
 using qglviewer::Vec;
@@ -60,6 +61,9 @@ void GraphElement::drawElement(bool isSelected)
 {
     glPushMatrix();
     glMultMatrixd(fr_.worldMatrix());
+    glMatrixMode(GL_TEXTURE);
+    glPushMatrix();
+    glMultMatrixd(fr_.worldMatrix());
     if (isSelected) { //with wireframes
         glEnable(GL_POLYGON_OFFSET_FILL);
         glPolygonOffset(1.0, 1.0);
@@ -78,5 +82,8 @@ void GraphElement::drawElement(bool isSelected)
         glColor3f(0.5,0.5,0.5);
         pbm_->drawModel();
     }
+    glMatrixMode(GL_TEXTURE);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
     glPopMatrix();
 }

@@ -28,6 +28,7 @@ public:
     BaseModel();
     virtual ~BaseModel(){}
 
+    virtual void initModel(){}
     virtual void drawModel();
 };
 

@@ -20,6 +20,9 @@
 #define PLANEMODEL_H
 
 #include "basemodel.h"
+#include <QGLViewer/frame.h>
+
+using qglviewer::Frame;
 
 class PlaneModel : public BaseModel
 {
@@ -27,6 +30,7 @@ public:
     PlaneModel();
     virtual ~PlaneModel();
 
+    virtual void initModel();
     virtual void drawModel();
 };
 

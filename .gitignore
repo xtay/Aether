@@ -1,5 +1,6 @@
 *.pro.user
 *.mesh
+*.dat
 # C++ objects and libs
 
 *.slo
